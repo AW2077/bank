@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <div class="w3-top w3-teal ">
+    <div class="w3-top w3-teal">
         <div class="w3-bar w3-card bgmain">
 			<a href="login.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black w3-display-topright">Wyloguj</a>
 			<div class="w3-container">
@@ -20,15 +20,18 @@
 				<!-- wstawić kod na wyświetlanie imienia i nazwiska usera - TO DO FUNKCJA -->
 				<p class=" w3-large w3-display-topmiddle">Witaj w Banku&#8482  <img src="images/icon.png" alt="icon" width="30" height="30"> </p>
 			</div>
-            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black">Konto</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black">Kredyt</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black">Przelew</a>
-            <!-- przełączanie między kartami - TO DO -->
+            <button class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black tablink" onclick="openTab('Konto')">Konto</button>
+            <button class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black tablink"
+			onclick="document.getElementById('Kredyt').style.display='block'">Kredyt</button>
+            <button class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black tablink"
+			onclick="document.getElementById('Przelew').style.display='block'">Przelew</button>
+            <!-- przełączanie między kartami - DONE? kod do tab Konto nieużywany na razie -->
         </div>
     </div>
     <br><br><br><br>
 	<!-- celowy <br> nie usuwać -->
-    <div class="w3-display-container">
+	<!-- Tab Konto -->
+    <div id="Konto" class="w3-display-container tab">
 		<div class="w3-container  modern" style="padding-bottom: 0px;">
 			<div class="w3-half w3-padding-large">
 				<h2 class="modern" style="margin-bottom: 0%; padding-bottom: 0%;">Osobiste konto bankowe</h2>
@@ -171,14 +174,53 @@
             
 		  </table>
 
-		
-
+	<!-- TO DO zawartość - nazwiska autorów projektu? coś jeszcze?-->
 		<div class="w3-container w3-teal">
 			<p>cos</p>
 		</div>
     </div>
 
-    
+	<!-- Modal Kredyt -->
+	<!-- TO DO zawartość -->
+	<div id="Kredyt" class="w3-modal w3-animate-opacity">
+		<div class="w3-modal-content w3-animate-opacity w3-card-4">
+		  <header class="w3-container w3-teal"> 
+			<span onclick="document.getElementById('Kredyt').style.display='none'" 
+			class="w3-button w3-display-topright">&times;</span>
+			<h2>Modal Header</h2>
+		  </header>
+		  <div class="w3-container">
+			<p>Some text..</p>
+			<p>Some text..</p>
+		  </div>
+		  <footer class="w3-container w3-teal">
+			<p>Modal Footer</p>
+		  </footer>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal Przelew -->
+	<!-- TO DO zawartość -->
+	<div id="Przelew" class="w3-modal w3-animate-opacity">
+		<div class="w3-modal-content w3-animate-opacity w3-card-4">
+		  <header class="w3-container w3-teal"> 
+			<span onclick="document.getElementById('Przelew').style.display='none'" 
+			class="w3-button w3-display-topright">&times;</span>
+			<h2>Modal Header</h2>
+		  </header>
+		  <div class="w3-container">
+			<p>Some text..</p>
+			<p>Some text..</p>
+		  </div>
+		  <footer class="w3-container w3-teal">
+			<p>Modal Footer</p>
+		  </footer>
+		</div>
+	  </div>
+	</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 

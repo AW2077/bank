@@ -18,3 +18,15 @@ body,h1 {font-family: "Raleway", sans-serif}
   background-position: center;
   background-size:contain;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}

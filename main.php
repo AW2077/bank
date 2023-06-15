@@ -24,7 +24,7 @@
 	
     <div class="w3-top w3-teal">
         <div class="w3-bar w3-card bgmain">
-			<a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black w3-display-topright">Wyloguj</a>
+			<a href="index.php" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-black w3-display-topright">Wyloguj</a>
 			<div class="w3-container">
 				<p id="customer"></p> 
 				
